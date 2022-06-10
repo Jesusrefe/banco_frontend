@@ -1,0 +1,1 @@
+start chrome.exe --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp

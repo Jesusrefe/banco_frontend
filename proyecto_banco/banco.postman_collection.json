@@ -1,0 +1,1225 @@
+{
+	"info": {
+		"_postman_id": "f464a7e1-cb77-444c-8e8b-08df906adee5",
+		"name": "banco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "cliente1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "cliente1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/login/cliente/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"login",
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gestor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/login/gestor/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"login",
+								"gestor",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "gestores",
+			"item": [
+				{
+					"name": "obtenerGestores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/gestores/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"gestores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerGestorPorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/gestores/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"gestores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerGestorPorUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/gestores/gestor1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"gestores",
+								"gestor1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerClientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/clientes/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerClientePorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/clientes/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerClientePorUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/clientes/cliente1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"clientes",
+								"cliente1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerMensajesRecibidos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/mensajes/recibidos",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"mensajes",
+								"recibidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerMensajesEnviados",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/mensajes/enviados",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"mensajes",
+								"enviados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerMensajePorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/mensajes/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"mensajes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTransferencias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/transferencias/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"transferencias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTransferenciaPorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/transferencias/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"transferencias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregarGestor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuario\": \"gestor2\",\n\t\"password\": \"gestor2\",\n\t\"correo\": \"gestor4@mail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}/gestores/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"gestores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregarCliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuario\": \"cliente4\",\n\t\"id_gestor\": 1,\n\t\"password\": \"cliente4\",\n\t\"correo\": \"cliente4@mail.com\",\n\t\"saldo\": 200.0\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}/clientes/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"clientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enviarMensaje",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_destino\": 2,\n\t\"texto\": \"hola gestor2\",\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}/mensajes/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"mensajes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarGestorPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/gestores/3",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"gestores",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarClientePorId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/clientes/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarMensajes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/mensajes/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"mensajes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarMensajePorId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/mensajes/3",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"mensajes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d193d38b-448c-46f1-9731-2c35ca3d5b78",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b0c5a07b-cdd7-4b4c-81c3-9215705d563b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "obtenerInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/cliente/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "realizarIngreso",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/cliente/ingreso/1000",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cliente",
+								"ingreso",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTransferencias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/cliente/transferencias/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cliente",
+								"transferencias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTransferenciaPorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usuario",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "gestor1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{server}}/cliente/transferencias/1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cliente",
+								"transferencias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "realizarTransferencia",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_beneficiario\": 2,\n\t\"importe\": 50,\n\t\"concepto\": \"120\"\n}"
+						},
+						"url": {
+							"raw": "http://{{server}}/cliente/transferencias/",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cliente",
+								"transferencias",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "http://{{server}}/ok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{server}}/ok",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"ok"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

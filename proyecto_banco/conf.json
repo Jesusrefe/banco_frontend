@@ -1,0 +1,14 @@
+{
+	"port": 8085,
+	
+	"database_type": "sqlite",
+	"database_sqlite_filename": "database.db",
+	"database_mysql_host": "localhost",
+	"database_mysql_user": "banco",
+	"database_mysql_password": "banco",
+	"database_mysql_name": "banco",
+	
+	"log": false,
+	"is_fixed_token": false,
+	"fixed_token": "token"
+}
