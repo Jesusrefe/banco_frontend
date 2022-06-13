@@ -29,9 +29,51 @@ const cliente2 = {
     correo: 'cliente2@gmail.com',
     saldo: Math.random() * 1000
 };
+//este array tiene 2 gestores en forma de variable más 1 que yo incluyo
+const gestores = [gestor1, gestor2, {
+    id: 3,
+    usuario: 'gestor3',
+    password: 'gestor3',
+    correo: 'gestor3@mail.com'
+}];
 
-console.log(gestor2);
-console.log(cliente2);
+const clientes = [cliente1, cliente2];
+clientes.push({//otra forma de añadir otro cliente (objeto)
+    id: 3,
+    id_gestor: 1,
+    usuario: 'cliente3',
+    password: 'cliente3',
+    correo: 'cliente3@gmail.com',
+    saldo: 1700.36
+});
+//gestores es un array
+// gestor es un objeto con las propiedades: id, usuario, password, correo
+console.log('----GESTORES----');
+for (const gestor of gestores) {
+    console.log(`id: ${gestor.id}`);
+    console.log(`usuario: ${gestor.usuario}`);
+    console.log(`password: ${gestor.password}`);
+    console.log(`correo: ${gestor.correo}`);
+    console.log('-----');//separacion para la consola
+}
+
+console.log('----CLIENTES----');
+for (const cliente of clientes) {
+    console.log(`id: ${cliente.id}`);
+    console.log(`id_gestor: ${cliente.id_gestor}`);
+    console.log(`usuario: ${cliente.usuario}`);
+    console.log(`password: ${cliente.password}`);
+    console.log(`correo: ${cliente.correo}`);
+    console.log(`saldo: ${cliente.saldo}`);
+}
 
 
+// todos los gestores
+console.log(gestores);
 
+// primer gestor
+console.log(gestores[0]);
+
+
+// console.log(gestor2);
+// console.table(cliente2);
